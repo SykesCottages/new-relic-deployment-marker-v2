@@ -1,0 +1,29 @@
+name: "New Relic Deployment Marker"
+description: "This Bitbucket Pipe helps you add deployment marker to New Relic APM. It finds the application ID in New Relic based on the application name and component type."
+category: Utilities
+variables:
+  - name: NEW_RELIC_API_KEY
+    default: "$NEW_RELIC_API_KEY"
+    description: "New Relic API Key"
+  - name: SYSTEM_NAME
+    default: "$SYSTEM_NAME"
+    description: "The name of the application to find the ID for"
+  - name: COMPONENT_TYPE
+    default: "$COMPONENT_TYPE"
+    description: "The component type of the application to find the ID for. Options are Web, Cmd and Cron"
+  - name: ENVIRONMENT
+    default: "$ENVIRONMENT"
+  - name: REGION
+    default: "$REGION"
+  - name: DEPLOYMENT_USER
+    default: "bitbucket.pipeline"
+  - name: DEPLOYMENT_REVISION
+    default: "$BITBUCKET_COMMIT"
+repository: https://github.com/SykesCottages/bitbucket-pipes
+vendor:
+  name: NewRelic
+maintainer:
+  name: Sykes Cottages
+tags:
+  - deployment
+  - NewRelic
