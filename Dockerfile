@@ -1,10 +1,9 @@
 FROM python:3.11-slim
 
-WORKDIR /usr/src/app
-
-COPY pipe/pipe.py .
-COPY requirements.txt .
+COPY requirements.txt /
+WORKDIR /
 
 RUN pip install --no-cache-dir -r requirements.txt
+COPY pipe /
 
-CMD ["python", "pipe.py"]
+CMD ["python3", "/pipe.py"]
