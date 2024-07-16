@@ -1,7 +1,3 @@
-Certainly! Here's a README template based on the AWS CodeDeploy pipe example, tailored for your "New Relic Deployment Marker" Bitbucket Pipe:
-
----
-
 # New Relic Deployment Marker Bitbucket Pipe
 
 ## Description
